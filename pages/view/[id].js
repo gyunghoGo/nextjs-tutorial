@@ -5,29 +5,7 @@ import Item from "../../src/component/Item";
 import { Loader } from "semantic-ui-react";
 import Head from "next/head";
 
-const Post = ({ item }) => {
-  //   const [item, setItem] = useState({});
-  //   const [isLoading, setIsLoading] = useState(false);
-  //   const router = useRouter();
-  //   const { id } = router.query;
-  //   const API_URL = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
-
-  //   async function getData() {
-  //     try {
-  //       const res = await axios.get(API_URL);
-  //       setItem(res.data);
-  //       setIsLoading(true);
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   }
-
-  //   useEffect(() => {
-  //     if (id && id > 0) {
-  //       getData();
-  //     }
-  //   }, [id]);
-
+const Post = ({ item, name }) => {
   return (
     <>
       {item && (
@@ -36,6 +14,7 @@ const Post = ({ item }) => {
             <title>{item.name}</title>
             <meta name="description" content={item.description}></meta>
           </Head>
+          {name} 환경입니다.
           <Item item={item} />
         </>
       )}
@@ -54,6 +33,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       item: data,
+      name: process.env.name,
     },
   };
 }
