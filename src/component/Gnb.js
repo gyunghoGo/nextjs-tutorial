@@ -9,6 +9,8 @@ export default function Gnb() {
     activeItem = "home";
   } else if (router.pathname === "/about") {
     activeItem = "about";
+  } else if (router.pathname === "/admin") {
+    activeItem = "admin";
   }
 
   const goLink = (e, data) => {
@@ -25,6 +27,13 @@ export default function Gnb() {
         name="about"
         active={activeItem === "about"}
         onClick={goLink}
+      />
+      <Menu.Item
+        name="admin"
+        active={activeItem === "admin"}
+        onClick={() => {
+          router.push("/admin");
+        }}
       />
     </Menu>
   );
