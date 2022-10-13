@@ -1,20 +1,14 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import axios, { Axios } from "axios";
-import { useEffect, useState } from "react";
-import ItemList from "../src/component/ItemList/ItemList";
-import { Header, Divider, Loader } from "semantic-ui-react";
+import Head from 'next/head';
+import axios from 'axios';
+import ItemList from '../src/component/ItemList/ItemList';
+import { Header, Divider } from 'semantic-ui-react';
 
 export default function Home({ list }) {
   return (
     <div>
       <Head>
         <title>goguard</title>
-        <meta
-          name="description"
-          content="nextjs 연습하는 페이지 입니다."
-        ></meta>
+        <meta name="description" content="nextjs 연습하는 페이지 입니다."></meta>
       </Head>
       <>
         <Header as="h3" style={{ paddingTop: 40 }}>

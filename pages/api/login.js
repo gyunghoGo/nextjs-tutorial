@@ -1,7 +1,7 @@
 export default function handler(req, res) {
-  if (req.method === "POST") {
-    res.setHeader("Set-Cookie", "a_name=Jake;Max-Age=3600;HttpOnly,Secure");
+  if (req.method === 'POST') {
+    res.setHeader('Set-Cookie', 'a_name=Jake;Max-Age=3600;HttpOnly,Secure');
     res.statusCode = 200;
-    res.json({ message: "ok" });
+    res.json({ message: 'ok' });
   }
 }

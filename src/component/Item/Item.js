@@ -1,17 +1,8 @@
-import styles from "./Item.module.css";
-import { Button, Header } from "semantic-ui-react";
+import styles from './Item.module.css';
+import { Button, Header } from 'semantic-ui-react';
 
 export default function Item({ item }) {
-  const {
-    image_link,
-    name,
-    price,
-    description,
-    category,
-    product_type,
-    update_at,
-    product_link,
-  } = item;
+  const { image_link, name, price, description, category, product_type, update_at, product_link } = item;
   return (
     <>
       <div className={styles.wrap}>
@@ -22,7 +13,7 @@ export default function Item({ item }) {
           <strong className={styles.tit_item}>{name}</strong>
           <strong className={styles.num_price}>${price}</strong>
           <span className={styles.txt_info}>
-            {category ? `${category}/` : ""}
+            {category ? `${category}/` : ''}
             {product_type}
           </span>
           <Button color="orange">구매하기</Button>

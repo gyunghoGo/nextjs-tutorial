@@ -1,11 +1,4 @@
-import {
-  Header,
-  Divider,
-  List,
-  Button,
-  Form,
-  TextArea,
-} from "semantic-ui-react";
+import { Header, Divider, List, Button, Form, TextArea } from 'semantic-ui-react';
 
 export default function About() {
   return (
