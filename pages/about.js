@@ -1,6 +1,11 @@
 import { Header, Divider, List, Button, Form, TextArea } from 'semantic-ui-react';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { nameState, charState } from '../store/states';
 
 export default function About() {
+  const charLen = useRecoilValue(charState);
+  const [name, setName] = useRecoilState(nameState);
+
   return (
     <div>
       <Header as="h3" style={{ paddingTop: 40 }} color="teal">
@@ -39,6 +44,8 @@ export default function About() {
         <Form.Field>
           <label>First Name</label>
           <input placeholder="First Name" />
+          <div>Hello, I'm {name}</div>
+          <div>My name has {charLen} charactor</div>
         </Form.Field>
         <Form.Field>
           <label>Last Name</label>
