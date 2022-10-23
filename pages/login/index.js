@@ -2,7 +2,7 @@ import { Form, Button } from 'semantic-ui-react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useRecoilState } from 'recoil';
-import { nameState } from '../store/states';
+import { nameState } from '../../store/states';
 
 export default function Login() {
   const [name, setName] = useRecoilState(nameState);

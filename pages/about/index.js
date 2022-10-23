@@ -1,6 +1,6 @@
 import { Header, Divider, List, Button, Form, TextArea } from 'semantic-ui-react';
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { nameState, charState } from '../store/states';
+import { nameState, charState } from '../../store/states';
 
 export default function About() {
   const charLen = useRecoilValue(charState);
